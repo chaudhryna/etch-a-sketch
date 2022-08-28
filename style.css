@@ -1,0 +1,24 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin: 1.5em;
+}
+
+#container {
+    margin: 0 auto;
+    background-color: rgb(231, 225, 225);
+    width: 55vw;
+    height: 45vw;
+    border: 45px solid red;
+    border-radius: 10px;
+    display: grid;
+}
+
+.square {
+    border: 1px solid lightgrey;
+}
