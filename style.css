@@ -20,7 +20,7 @@ header {
     background-color: rgb(231, 225, 225);
     width: 55vw;
     height: 45vw;
-    border: 45px solid red;
+    border: 45px solid rgba(220, 0, 0, 1);
     border-radius: 10px;
     display: grid;
 }
@@ -29,8 +29,27 @@ header {
     border: 1px solid lightgrey;
 }
 
+.tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .slider label, 
-.slider output {
+.slider output,
+.color {
     padding: 2em 0;
     font-size: 1.5rem;
+}
+
+#reset {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
 }
