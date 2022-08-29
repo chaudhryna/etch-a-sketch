@@ -1,3 +1,4 @@
+/* general reset */
 *,
 *::before,
 *::after {
@@ -5,10 +6,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* resets range */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
 
 header {
-    text-align: center;
-    margin: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em 1.5em;
 }
 
 .layout {
@@ -33,14 +44,107 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px -4px lightslategrey;
+    padding: 1em 2em;
 }
 
-.slider label, 
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+   -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+   background-color: #053a5f;
+   border-radius: 0.5rem;
+   height: 0.5rem;  
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+   appearance: none;
+   margin-top: -12px; /* Centers thumb on the track */
+
+   /*custom styles*/
+   background-color: rgba(220, 0, 0, 1);
+   height: 2rem;
+   width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {   
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem; 
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+   background-color: #053a5f;
+   border-radius: 0.5rem;
+   height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+   border: none; /*Removes extra border that FF applies*/
+   border-radius: 0; /*Removes default border-radius that FF applies*/
+
+   /*custom styles*/
+   background-color: rgba(220, 0, 0, 1);
+   height: 2rem;
+   width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem; 
+}
+
+.slider label,
 .slider output,
-.color {
-    padding: 2em 0;
-    font-size: 1.5rem;
+.color,
+p {
+    line-height: 2em;
+    font-size: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+}
+
+.slider output {
+box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+.slider input[type="number"] {
+  width: 40px;
+  padding: 2em 2em;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+
+
+.slider output {
+  background: rgba(220, 0, 0, 1);
+  padding: 5px 16px;
+  border-radius: 3px;
+  color: #fff;
 }
 
 #reset {
@@ -52,4 +156,25 @@ header {
     color: #fff;
     border-radius: 10px;
     background-color: rgba(220, 0, 0, 1);
+    width: 17em;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+.random-color {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2165A3;
+    width: 17em;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+#color {
+    width: 10em;
+    height: 4em;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
 }
