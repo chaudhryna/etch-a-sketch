@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 const price = document.querySelector('#size');
 const output = document.querySelector('.grid-size');
+const color = document.querySelector('#color');
 
 output.textContent = size.value;
 
@@ -21,11 +22,15 @@ size.addEventListener('input', () => {
     generateGrid(gridSize);
 });
 
+color.addEventListener('input', () => {
+    console.log(color.value);
+})
+
 generateGrid(16)
 
 // Event listener
 container.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('square')) {
-        e.target.style.backgroundColor = 'purple';
+        e.target.style.backgroundColor = color.value;
     }
 });
