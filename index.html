@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Etch A Sketch</title>
-        
+
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
     </head>
@@ -14,7 +14,27 @@
             <h1>Etch A Sketch</h1>
             <p>Move the mouse over the pad to make your sketch!</p>
         </header>
-
-        <div id="container"></div>
+        <div class="layout">
+            <section class="tools">
+                <div class="slider">
+                    <label for="price">Choose a grid size: </label><br>
+                    <input
+                        type="range"
+                        name="size"
+                        id="size"
+                        min="16"
+                        max="100"
+                        step="1"
+                        value="16"
+                    />
+                    <output class="grid-size" for="size"></output>
+                </div>
+                <hr>
+                <div>
+                    
+                </div>
+            </section>
+            <div id="container"></div>
+        </div>
     </body>
 </html>
